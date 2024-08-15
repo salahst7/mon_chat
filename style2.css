@@ -1,0 +1,169 @@
+/* Style général du corps */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Conteneur principal */
+.container {
+    width: 400px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Section utilisateur */
+.user {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Style de l'entête de profil */
+.profile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.profile .content {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 15px;
+    transition: transform 0.3s ease;
+}
+
+.profile img:hover {
+    transform: scale(1.1);
+}
+
+.profile .details span {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+}
+
+.profile .details p {
+    margin: 5px 0 0;
+    color: #888;
+    font-size: 14px;
+}
+
+/* Bouton de déconnexion */
+.profile a {
+    text-decoration: none;
+    color: #e74c3c;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.profile a:hover {
+    color: #c0392b;
+}
+
+/* Formulaire de recherche */
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+form input[type="text"] {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 50px 0 0 50px;
+    outline: none;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+form input[type="text"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 5px rgba(52, 152, 219, 0.5);
+}
+
+form button {
+    padding: 0 20px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 0 50px 50px 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button img {
+    width: 20px;
+    height: 20px;
+}
+
+form button:hover {
+    background-color: #2980b9;
+}
+
+/* Liste des utilisateurs */
+.all_user {
+    margin-top: 20px;
+}
+
+.all_user a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    margin-bottom: 10px;
+}
+
+.all_user a:hover {
+    background-color: #ecf0f1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.all_user .content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.all_user .content img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.all_user .detail span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+.status-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+    margin-left: auto;
+    transition: background-color 0.3s ease;
+}
+
+.all_user a:hover .status-dot {
+    background-color: #27ae60;
+}
