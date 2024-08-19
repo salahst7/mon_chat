@@ -1,5 +1,5 @@
 <?php
-include 'php/config.php';
+include 'config.php';
 
 $searchOn = $_POST['searchOn'];
 
@@ -8,14 +8,20 @@ $result = $conn->query($sql);
 
 $output = '';
 
-if ($result->num_rows == 0) {
+if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        $output = '<p>Aucun utilisateur trouvé</p>';
+        $output .= '<a href="chat.php">
+                        <div class="content">
+                            <img src="img/' . $row["img_user"] . '" alt="">
+                            <div class="details">
+                                <span>' . $row["name_user"] . '</span>
+                                <p>' . $row["status_user"] . '</p>
+                            </div>
+                        </div>
+                    </a>';
     }
 } else {
-    
-    include 'php/user_data.php';
+    $output = '<p>Aucun utilisateur trouvé</p>';
 }
-
 echo $output;
 ?>
